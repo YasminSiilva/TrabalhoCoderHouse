@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <script>
+        // Função para calcular o ICMS
+        function calcularICMS(precoCusto, taxaICMS) {
+            return precoCusto * (taxaICMS / 100);
+        }
+        // Solicitar o preço de custo e a taxa de ICMS ao usuário
+        var precoCusto = parseFloat(prompt("Digite o preço de custo:"));
+        var taxaICMS = parseFloat(prompt("Digite a taxa de ICMS (%):"));
+
+        // Calcular o ICMS
+        var icms = calcularICMS(precoCusto, taxaICMS);
+        // Mostrar o valor do ICMS
+        console.log("O valor do ICMS é: " + icms.toFixed(2));
+
+        // Solicitar os dois números a serem verificados como múltiplos
+        var numero1 = parseInt(prompt("Digite o primeiro número:"));
+        var numero2 = parseInt(prompt("Digite o segundo número:"));
+
+        var resultadoMultiplo = numero1 % numero2 === 0;
+
+        if (resultadoMultiplo) {
+            console.log(numero1 + " é múltiplo de " + numero2);
+        } else {
+            console.log(numero1 + " não é múltiplo de " + numero2);
+        }
+
+          
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
