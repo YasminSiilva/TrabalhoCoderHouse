@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <script>
+           let valorTotal = 
+           prompt("Digite o valor total:");
+           let numParcelas = 
+           prompt("Digite o número de parcelas:");
+
+           for(let i = 1; i <= numParcelas; i++) {
+            console.log("Parcela" + i + ": R$" + (valorTotal / numParcelas) .toFixed(2));
+           }
+
+           let valorEmprestimo = prompt("Digite o valor do emprestimo:");
+           let numParcelas1 = prompt("Digite o numéro de parcelas:");
+
+           for(let x = numParcelas1; x > 0; x--) {
+            console.log("Parcela" + (numParcelas1 - x + 1) + ": R$" + (valorEmprestimo / x).toFixed(2));
+            valorEmprestimo -= 
+            valorEmprestimo / x;
+           }
+
+           let entrada; do {
+            entrada = prompt("Digite um valor (ou 'sair') para encerrar): ");
+            if(entrada !== "sair") {
+                console.log("você digitou: " + entrada);
+            }
+           } while(entrada !== "sair");
+
+           let soma = 0;
+           let contador = 0;
+           let entrada1;
+
+           while(true) {
+            entrada = prompt("Digite um número(ou 'sair' para encerrar)");
+            if(entrada === "sair") {
+                break;
+            }
+            soma += Number(entrada);
+            contador++;
+            console.log("soma atual: " + soma);
+            console.log("Média atual: " +(soma / contador).toFixed(2));
+           }
+
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
